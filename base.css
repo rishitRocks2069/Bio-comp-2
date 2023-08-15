@@ -1,116 +1,33 @@
 :root{
-    --black:#232323;
+    --black:#000000;
     --green:#2fb5c0;
-    --white:#ffffff;
+    --white:#ecf2f5;
     --dark-green:#1b7e87;
-  }
-  html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-  }
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: 100%;
+ }
   
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Satoshi', sans-serif;
-    overflow-x: hidden;
-    background-color: var(--black);
-    color: var(--white);
-  }
-  h1,h2,h3{
-    font-family: 'Barlow',sans-serif;
-  }
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Satoshi', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--black);
+  color: var(--white);
+}
+h1,h2,h3{
+  font-family: 'Inter',sans-serif;
+}
   
-  a {
-    color: inherit;
-    text-decoration: none;
-    font-size: 16px;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+}
   
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 3rem;
-    background-color: transparent;
-  }
   
-  .left-nav ul {
-    display: flex;
-    list-style-type: none;
-    gap: 3.5rem;
-    padding: 0;
-  }
-  
-  .left-nav ul li a {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-    text-transform: uppercase;
-  }
-  
-  .left-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.125rem;
-    width: 100%;
-    height: 0.125rem;
-    background-color: #2fb5c0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .left-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-  
-  .right-nav {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
-  
-  .right-nav input[type="text"] {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.625rem;
-    width: 12.5rem;
-    font: inherit;
-  }
-  
-  .search-button {
-    background-color: #2fb5c0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-left: 0.625rem;
-    padding: .25rem .5rem;
-    border-radius: 0.625rem;
-    display: grid;
-    place-items: center;
-    margin-left: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .search-button:hover {
-    background-color: #1b7e87;
-  }
-  
-  .search-button ion-icon {
-    font-size: 2rem;
-  }
-  
-  .right-nav input[type="text"]:focus {
-    box-shadow: 0 0 0.3125rem #2fb5c0;
-    transition: box-shadow 0.2s ease-in-out;
-  }
-  main{
-    padding: 2rem 3rem;
-  }

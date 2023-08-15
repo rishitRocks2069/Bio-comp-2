@@ -1,56 +1,39 @@
 :root{
-    --black:#232323;
+    --black:#000000;
     --green:#2fb5c0;
-    --white:#ffffff;
+    --white:#ecf2f5;
     --dark-green:#1b7e87;
 }
 .hero{
-    display: grid;
-    grid-template-columns: 3fr 3fr 2fr;
-    gap: .5rem;
-    min-height: 30rem;
-    height: 70vh;
-    max-height: 80rem;
-}
-div:has(img) img{
-    width: 100%;
-    height: 100%;
-}
-.scroll{
-    position: relative;
-}
-.scroll p a{
-    position: absolute;
-    margin: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 1.3rem;
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
-.scroll p a ion-icon{
-    margin-left: .5rem;
-    transform: translatey(.1rem);
-    font-size: 1.3rem;
+.hero h1{
+    font-size: 15rem;
+    margin-block: .5rem;
+    margin-top: 2rem;
 }
-.scroll p a:hover ion-icon{
-    animation: down 500ms;
+.hero img{
+    width: 70%;
 }
-@keyframes down{
-    0%{
-        transform: translatey(.1rem); 
-    }
-    50%{
-        transform: translatey(.5rem); 
-    }
-    100%{
-        transform: translatey(.2rem); 
-    }
+
+section{
+    padding: 2rem;
 }
-.sec2{
-    margin-top: 4rem;
+.section h2{
+    margin-top: 0;
 }
-.sec2 p{
-    max-width: 45REM;
+.paras{
+    display: flex;
+    gap: 3rem;
+}
+.paras h3{
+    margin-top: 0;
+    margin-bottom: .2rem;
+}
+section p{
+    max-width: 60rem;
 }
