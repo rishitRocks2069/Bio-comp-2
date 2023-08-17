@@ -6,21 +6,12 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+
   <script src="https://cdn.tailwindcss.com"></script>
   
 </head>
-<style>
-    html{
-        scroll-behavior: smooth;
-    }
-</style>
 <body class="bg-[#98bc6c]" style="font-family: 'Satoshi', sans-serif;">
-    <script>
-        AOS.init();
-      </script>
-<section class="h-screen w-full relative" data-aos="fade-up">
+<section class="h-screen w-full relative">
     <Div class="flex flex-cols justify-center items-center h-full">
         <div class="grid">
             <div class="flex flex-cols justify-center items-center"><img src="star.png"></div>
@@ -32,9 +23,9 @@
             </div>
         </div>
     </Div>
-<a href="#scroll" class="text-xl absolute bottom-5 right-10">Scroll To Discover <ion-icon name="arrow-down-outline" class="animate-bounce"></ion-icon></a>
+<h1 class="text-xl absolute bottom-5 right-10">Scroll To Discover <ion-icon name="arrow-down-outline" class="animate-bounce"></ion-icon></h1>
 </section>
-<section class=" w-full" id="scroll" data-aos="fade-up">
+<section class=" w-full">
     <h1 class="text-[10rem] text-center font-bold drop-shadow-xl">AWAKENING</h1>
     <div class="flex flex-cols justify-center items-center ">
         <h1 class="text-center text-2xl w-[50vw] ">Reveal the disturbing truth behind fast fashion and its environmental havoc through excessive textile wastage. Join the mission for a greener future, where conscious choices and sustainable practices reshape the fashion industry's course. Your actions can be the change our world urgently needs.</h1>
@@ -47,7 +38,7 @@
     </Div>
 </section>
 
-<section data-aos="fade-up">
+<section>
     <div class="">
         <Div class="flex flex-cols justify-center items-center mt-10">
         <Div class="grid gap-5">
@@ -92,7 +83,7 @@
     </Div>
     </div>
 </section>
-<Section class=" w-full py-10 px-[14vw] mt-10" data-aos="fade-up">
+<Section class=" w-full py-10 px-[14vw] mt-10" >
     <div class="flex flex-cols justify-center items-center">
        <div class="flex flex-cols justify-center items-center">
             <div class="grid gap-5">
@@ -119,7 +110,7 @@
         <Div class="w-1/2 h-full"></Div>
     </div>
 </Section>
-<section class="text-gray-600 body-font px-[12vw]" data-aos="fade-up">
+<section class="text-gray-600 body-font px-[12vw]">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       
       <div class="flex flex-wrap md:-m-2 -m-1">
@@ -148,7 +139,7 @@
       </div>
     </div>
   </section>
-  <Section class="px-20 py-10" data-aos="fade-up">
+  <Section class="px-20 py-10">
     <div class="flex flex-cols ">
        
             <div class="grid gap-5 px-[9vw]">
@@ -200,5 +191,17 @@
   </div>
 </footer>
 
+
+
+<Script> // Function to detect if the user is on a mobile device
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    
+    // Redirect if the user is on a mobile device
+    if (isMobileDevice()) {
+      window.location.href = "mobile.html"; // Replace with your desired mobile page URL
+    }
+</Script>
 </body>
 </html>

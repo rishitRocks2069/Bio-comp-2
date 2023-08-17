@@ -6,12 +6,12 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
-</head>
-<body class="bg-[#98bc6c] " style="font-family: 'Satoshi', sans-serif;">
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body class="bg-[#98bc6c] " style="font-family: 'Satoshi', sans-serif;">
   <header class="p-4 bg-transparent text-gray-900">
     <div class="container flex justify-between  mx-auto">
 
@@ -22,7 +22,7 @@
       <div class="flex items-center md:space-x-4">
         <div class="relative">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring" id="searchInput">
+            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
               <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-gray-800">
                 <path
                   d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
@@ -30,7 +30,7 @@
               </svg>
             </button>
           </span>
-          <input type="search" name="Search" placeholder="Search..." id="searchInput"
+          <input type="search" name="Search" placeholder="Search..."
             class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-gray-100 text-gray-800 focus:bg-gray-50">
         </div>
 
@@ -56,8 +56,21 @@
       </div>
       </div>
   </header>
+  <script>
+    const openCardButton = document.getElementById('open-card-button');
+    const card = document.getElementById('card');
 
-    <Section class="relative" data-aos="fade-up">
+    openCardButton.addEventListener('click', () => {
+      card.classList.remove('hidden');
+    });
+
+    card.addEventListener('click', (event) => {
+      if (event.target === card) {
+        card.classList.add('hidden');
+      }
+    });
+  </script>
+    <Section class="relative">
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a] h-[16vw] w-[16vw]"></div>
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -76,7 +89,7 @@
 </div>
 </Section>
 
-<section class="text-gray-600 body-font relative" data-aos="fade-up">
+<section class="text-gray-600 body-font relative">
     <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a] h-[16vw] w-[16vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -118,7 +131,7 @@
      
     </div>
   </section>
-<Section class="relative" data-aos="fade-up">
+<Section class="relative">
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a] h-[16vw] w-[16vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -185,132 +198,32 @@
   <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal1">
     <div class="bg-white p-6 rounded shadow-md">
         <p>The glittering runways and flashy advertisements paint only half the picture. Behind every fast fashion piece lies a trail of environmental devastation and exploited labor. As we chase the latest trends, we contribute to a cycle that damages our planet and disregards human rights. From excessive resource consumption to toxic dyeing processes, the hidden costs of fast fashion are alarming. Let's shift our focus from fleeting trends to sustainable choices. By supporting ethical brands and embracing slow fashion, we can break free from this damaging cycle and help create a future where style and conscience coexist.</p>
-        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal1')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded  focus:outline-none" onclick="closeModal('modal1')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal2">
     <div class="bg-white p-6 rounded shadow-md">
         <p>Our overflowing wardrobes are a reflection of a larger problem: textile waste. Landfills packed with discarded clothes release harmful chemicals into the environment. Synthetic fabrics take decades to decompose, leaving a lasting impact. But there's hope. By embracing conscious consumption, we can reduce textile waste's toll. Buying fewer, higher-quality items, supporting upcycling initiatives, and participating in clothing swaps are small steps toward a cleaner, greener world. Remember, fashion is more than a fleeting trend – it's a chance to make a lasting change.</p>
-        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal2')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded  focus:outline-none" onclick="closeModal('modal2')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 "  id="modal3">
     <div class="bg-white p-6 rounded shadow-md">
         <p>Ever thought about the journey your clothes take before reaching your closet? It's a complex process involving raw materials, energy-intensive manufacturing, and global transportation. From cotton fields to garment factories, every step has an environmental and social impact. Understanding this journey can empower us to make informed choices. By supporting sustainable materials and local production, we can minimize our carbon footprint and support fair labor practices. Let's unravel the hidden story behind our garments and opt for fashion that reflects values beyond appearance.</p>
-        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal3')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded  focus:outline-none" onclick="closeModal('modal3')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal4">
     <div class="bg-white p-6  rounded shadow-md">
         <p>Every outfit we wear carries a weight beyond its fabric. The fashion industry's colossal carbon footprint and staggering waste output contribute significantly to environmental degradation. Discarded clothes emit greenhouse gases and pollute waterways. But change is within our grasp. By valuing durability, opting for eco-friendly materials, and responsibly disposing of old garments, we can minimize our personal fashion footprint. Let's remember that every choice we make has the potential to shape a cleaner, healthier planet for future generations.</p>
-        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal4')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded  focus:outline-none" onclick="closeModal('modal4')">Close</button>
     </div>
 </div>
 
 </Section>
-<style>
-  :root{
-    --black:#000000;
-    --green:#98bc6c;
-    --dark-green:#88b45c;
-}
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-  .bold{
-    font-size: 2.4em;
-    font-weight: 800;
-    text-decoration: none;
-  }
-  .content h1{
-    display: block; font-size: 1.8em; margin-top: 0.5em; margin-bottom: 0.67em; margin-left: 0; margin-right: 0;
-    font-weight: 700;
-    position: relative;
-    width: max-content;
-  }
-  .content h2{
-    display: block; font-size: 1.6em; margin-top: 0.7em; margin-bottom: 0.83em; margin-left: 0; margin-right: 0;padding-left: 1rem;
-    font-weight: 600;
-    
-  }
-  .content p{
-    color: #1e1e1e;
-  }
-  .sec{
-    padding: .5rem;
-    border-top: 3px solid #1e1e1e;
-    max-width: 30rem;
-    text-align: center;
-  }
-  .sec-parent{
-    display: flex;
-    gap: 1rem;
-    margin-left: 1.5rem;
-  }
-  .sec b{
-    font-size: 1.3em;
-    margin-bottom: .5rem;
-    font-weight: 500;
-  }
-</style>
-<section class="content p-8" data-aos="fade-up">
-  <h1 class="bold">More about Textile Waste</h1>
-  <h1>I. Resource Depletion and Pollution</h1>
-<h2>A. Excessive Water Consumption</h2>
-
-  <div class="sec-parent">
-    <div class="sec">
-      <b>Water-Intensive Production Processes</b> <br> Fast fashion's rapid production cycles require significant amounts of water for processes like dyeing, finishing, and fabric treatment. 
-     </div>
-   <div class="sec"><b>Water Pollution from Dyeing and Finishing</b> <br> Chemical-laden wastewater from these processes often gets released into water bodies, leading to contamination and disruption of aquatic ecosystems.</div>
-  </div>
-
-<h2>B. Energy Intensity</h2>
-<div class="sec-parent"><div class="sec"><b>High Energy Consumption in Production</b> <br> The fast fashion industry relies heavily on energy-intensive processes, including fabric production, garment assembly, and transportation.</div>
-<div class="sec"><b>Fossil Fuel Reliance for Manufacturing and Transportation</b><br> Energy derived from fossil fuels contributes to air pollution, greenhouse gas emissions, and climate change.</div></div>
-
-<h1>II. Chemical Pollution and Waste Generation</h1>
-<h2>A. Hazardous Chemicals in Textile Production</h2>
-<div class="sec-parent">
- <div class="sec"><b>Use of Toxic Dyes and Chemicals</b> <br> Many fast fashion items are produced using hazardous chemicals that can harm both the environment and human health.</div>
- <div class="sec"><b>Discharge into Waterways and Soil</b> <br> Improper disposal of these chemicals contaminates water sources, affecting aquatic life, and can lead to soil degradation.</div>
-</div>
-
-<h2>B. Accumulation of Non-Biodegradable Materials</h2>
-<div class="sec-parent">
-  <div class="sec"><b>Proliferation of Synthetic Fabrics</b> <br> Fast fashion's reliance on synthetic materials like polyester contributes to the generation of non-biodegradable waste.</div>
-  <div class="sec"><b>Release of Microplastics into Ecosystems</b> <br> Washing synthetic garments releases microplastics into waterways, where they can be ingested by aquatic organisms, entering the food chain.</div>  
-</div>
-
-<h1>III. Greenhouse Gas Emissions and Climate Impact</h1>
-<h2>A. Carbon Footprint of Fast Fashion</h2>
-<div class="sec-parent">
-  <div class="sec"><b>Manufacturing and Transportation Emissions</b> <br> High production volumes and global supply chains lead to substantial carbon emissions from manufacturing and transportation.</div>
-  <div class="sec"><b>Short-Lived Garment Usage and Disposal</b> The short lifespan of fast fashion items means that emissions associated with their production are not proportionate to their usage period.</div>
-</div>
-
-<h2>B. Contribution to Climate Change</h2>
-<div class="sec-parent">
-  <div class="sec"><b>Methane Emissions from Decomposing Textiles</b> <br> In landfills, decomposing textiles release methane, a potent greenhouse gas that contributes to global warming.</div>
-  <div class="sec"><b>Amplification of Global Warming Effects</b><br> The fashion industry's overall contribution to climate change exacerbates the impacts of rising temperatures, extreme weather events, and sea-level rise.</div>
-</div>
-
-<h1>IV. Disruption of Ecosystems and Natural Processes</h1>
-<h2>A. Pollution Effects on Water and Soil</h2>
-<div class="sec-parent">
-  <div class="sec"><b>Contaminated Water Bodies </b> <br>Chemical runoff from textile production contaminates water sources, affecting aquatic ecosystems and human water supplies.</div>
-  <div class="sec"><b>Soil Degradation and Loss of Arable Land</b> <br> Soil exposed to pollutants and chemicals becomes less fertile, impacting agricultural productivity and biodiversity.</div></div>
-<h2>
-  B. Impact on Wildlife and Habitats</h2>
-<div class="sec-parent">
-  <div class="sec"><b>Harm to Aquatic Life</b> <br> Chemical pollution and microplastics harm marine and freshwater organisms, leading to reduced biodiversity and ecosystem imbalances.</div>
-  <div class="sec"><b>Disruption of Ecosystems Due to Waste Accumulation</b> <br> Textile waste that isn't properly managed can accumulate in natural habitats, causing habitat disruption and degradation.</div> </div>
-</section>
 <footer class="text-gray-600 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -324,7 +237,6 @@
   </div>
 </footer>
 <script>
-  AOS.init();
     function openModal(modalId) {
         document.getElementById(modalId).classList.remove('hidden');
     }
@@ -332,43 +244,19 @@
     function closeModal(modalId) {
         document.getElementById(modalId).classList.add('hidden');
     }
-    const openCardButton = document.getElementById('open-card-button');
-  const card = document.getElementById('card');
-
-  openCardButton.addEventListener('click', () => {
-    card.classList.remove('hidden');
-  });
-
-  card.addEventListener('click', (event) => {
-    if (event.target === card) {
-      card.classList.add('hidden');
-    }
-  });
-  const searchInput = document.getElementById('searchInput');
-
-searchInput.addEventListener('input', searchContent);
-
-function searchContent() {
-const searchTerm = searchInput.value.toLowerCase();
-const paragraphs = document.getElementsByTagName('div','p','h1','h2');
-
-for (const paragraph of paragraphs) {
-  const paragraphText = paragraph.textContent.toLowerCase();
-  if (paragraphText.includes(searchTerm)) {
-    paragraph.style.display = 'block';
-    highlightMatchingText(paragraph, searchTerm);
-  } else {
-    paragraph.style.display = 'none';
-  }
-}
-}
-
-function highlightMatchingText(element, searchTerm) {
-const regex = new RegExp(`(${searchTerm})`, 'gi');
-const innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
-element.innerHTML = innerHTML;
-}
 </script>
+
+
+<Script> // Function to detect if the user is on a mobile device
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+  
+  // Redirect if the user is on a mobile device
+  if (isMobileDevice()) {
+    window.location.href = "mobile.html"; // Replace with your desired mobile page URL
+  }
+</Script>
 
 </body>
 </html>
