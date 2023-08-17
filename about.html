@@ -6,12 +6,12 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
 </head>
-
 <body class="bg-[#98bc6c] " style="font-family: 'Satoshi', sans-serif;">
+
   <header class="p-4 bg-transparent text-gray-900">
     <div class="container flex justify-between  mx-auto">
 
@@ -22,7 +22,7 @@
       <div class="flex items-center md:space-x-4">
         <div class="relative">
           <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring" id="searchInput">
               <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-gray-800">
                 <path
                   d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
@@ -30,7 +30,7 @@
               </svg>
             </button>
           </span>
-          <input id="blogSearch" type="search" name="Search" placeholder="Search blogs..."
+          <input type="search" name="Search" placeholder="Search..." id="searchInput"
             class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-gray-100 text-gray-800 focus:bg-gray-50">
         </div>
 
@@ -56,13 +56,6 @@
       </div>
       </div>
   </header>
-  <script>
-    const openCardButton = document.getElementById('open-card-button');
-    const card = document.getElementById('card');
-
-    openCardButton.addEventListener('click', () => {
-      card.classList.remove('hidden');
-    });
 
     card.addEventListener('click', (event) => {
       if (event.target === card) {
@@ -89,7 +82,7 @@
 </div>
 </Section>
 
-<section class="text-gray-600 body-font relative">
+<section class="text-gray-600 body-font relative" data-aos="fade-up">
     <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a] h-[16vw] w-[16vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -131,7 +124,7 @@
      
     </div>
   </section>
-<Section class="relative">
+<Section class="relative" data-aos="fade-up">
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a] h-[16vw] w-[16vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -198,28 +191,28 @@
   <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal1">
     <div class="bg-[#98bc6c] p-6 rounded shadow-md">
         <p>The glittering runways and flashy advertisements paint only half the picture. Behind every fast fashion piece lies a trail of environmental devastation and exploited labor. As we chase the latest trends, we contribute to a cycle that damages our planet and disregards human rights. From excessive resource consumption to toxic dyeing processes, the hidden costs of fast fashion are alarming. Let's shift our focus from fleeting trends to sustainable choices. By supporting ethical brands and embracing slow fashion, we can break free from this damaging cycle and help create a future where style and conscience coexist.</p>
-        <button href="about.html"><button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold mt-4" onclick="closeModal('modal1')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal1')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal2">
     <div class="bg-[#98bc6c] p-6 rounded-lg shadow-md">
         <p>Our overflowing wardrobes are a reflection of a larger problem: textile waste. Landfills packed with discarded clothes release harmful chemicals into the environment. Synthetic fabrics take decades to decompose, leaving a lasting impact. But there's hope. By embracing conscious consumption, we can reduce textile waste's toll. Buying fewer, higher-quality items, supporting upcycling initiatives, and participating in clothing swaps are small steps toward a cleaner, greener world. Remember, fashion is more than a fleeting trend – it's a chance to make a lasting change.</p>
-        <button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold mt-4" onclick="closeModal('modal2')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal2')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 "  id="modal3">
     <div class="bg-[#98bc6c] p-6 rounded-lg shadow-md">
         <p>Ever thought about the journey your clothes take before reaching your closet? It's a complex process involving raw materials, energy-intensive manufacturing, and global transportation. From cotton fields to garment factories, every step has an environmental and social impact. Understanding this journey can empower us to make informed choices. By supporting sustainable materials and local production, we can minimize our carbon footprint and support fair labor practices. Let's unravel the hidden story behind our garments and opt for fashion that reflects values beyond appearance.</p>
-        <button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold mt-4" onclick="closeModal('modal3')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal3')">Close</button>
     </div>
 </div>
 
 <div class="hidden px-10 fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40" id="modal4">
     <div class="bg-white p-6  rounded shadow-md">
         <p>Every outfit we wear carries a weight beyond its fabric. The fashion industry's colossal carbon footprint and staggering waste output contribute significantly to environmental degradation. Discarded clothes emit greenhouse gases and pollute waterways. But change is within our grasp. By valuing durability, opting for eco-friendly materials, and responsibly disposing of old garments, we can minimize our personal fashion footprint. Let's remember that every choice we make has the potential to shape a cleaner, healthier planet for future generations.</p>
-        <button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold mt-4" onclick="closeModal('modal4')">Close</button>
+        <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none" onclick="closeModal('modal4')">Close</button>
     </div>
 </div>
 
@@ -237,6 +230,7 @@
   </div>
 </footer>
 <script>
+  AOS.init();
     function openModal(modalId) {
         document.getElementById(modalId).classList.remove('hidden');
     }
@@ -244,38 +238,43 @@
     function closeModal(modalId) {
         document.getElementById(modalId).classList.add('hidden');
     }
-</script>
-<!-- Add this script after your existing scripts -->
-<script>
-  const searchInput = document.getElementById('blogSearch');
-  const blogTitles = document.querySelectorAll('.font-medium.text-md.hover\\:underline.text-gray-100');
+    const openCardButton = document.getElementById('open-card-button');
+  const card = document.getElementById('card');
 
-  searchInput.addEventListener('input', () => {
-    const searchQuery = searchInput.value.toLowerCase();
-
-    blogTitles.forEach(blogTitle => {
-      if (blogTitle.textContent.toLowerCase().includes(searchQuery)) {
-        blogTitle.closest('.flex.items-end.justify-start.w-full.text-left.bg-center.bg-cover.h-96.bg-gray-500').style.display = 'flex';
-      } else {
-        blogTitle.closest('.flex.items-end.justify-start.w-full.text-left.bg-center.bg-cover.h-96.bg-gray-500').style.display = 'none';
-      }
-    });
+  openCardButton.addEventListener('click', () => {
+    card.classList.remove('hidden');
   });
+
+  card.addEventListener('click', (event) => {
+    if (event.target === card) {
+      card.classList.add('hidden');
+    }
+  });
+  const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('input', searchContent);
+
+function searchContent() {
+const searchTerm = searchInput.value.toLowerCase();
+const paragraphs = document.getElementsByTagName('div','p','h1','h2');
+
+for (const paragraph of paragraphs) {
+  const paragraphText = paragraph.textContent.toLowerCase();
+  if (paragraphText.includes(searchTerm)) {
+    paragraph.style.display = 'block';
+    highlightMatchingText(paragraph, searchTerm);
+  } else {
+    paragraph.style.display = 'none';
+  }
+}
+}
+
+function highlightMatchingText(element, searchTerm) {
+const regex = new RegExp(`(${searchTerm})`, 'gi');
+const innerHTML = element.textContent.replace(regex, '<span class="highlight">$1</span>');
+element.innerHTML = innerHTML;
+}
 </script>
-
-
-
-
-<Script> // Function to detect if the user is on a mobile device
-  function isMobileDevice() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
-  
-  // Redirect if the user is on a mobile device
-  if (isMobileDevice()) {
-    window.location.href = "mobile.html"; // Replace with your desired mobile page URL
-  }
-</Script>
 
 </body>
 </html>
