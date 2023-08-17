@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="faq.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#98bc6c]" style="font-family: 'Satoshi', sans-serif;">
+  <header class="p-4  text-gray-900">
+    <div class="container flex justify-between  mx-auto">
+
+      <button id="open-card-button"
+        class="px-5 flex flex-cols justify-center items-center  rounded-3xl hover:bg-white ease-in transition hover:text-[#98bc6c] text-white border-2 border-white">Menu</button>
+
+
+      <div class="flex items-center md:space-x-4">
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+              <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 text-gray-800">
+                <path
+                  d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
+                </path>
+              </svg>
+            </button>
+          </span>
+          <input type="search" name="Search" placeholder="Search..."
+            class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none bg-gray-100 text-gray-800 focus:bg-gray-50">
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+
+    <div id="card"
+      class=" absolute z-10 hidden fixed top-0 left-0 w-full h-full flex items-center justify-center  bg-[#98bc6c]">
+      <div class="h-[80vh] grid grid-rows text-center w-full mx-10">
+        <a href="index.html">
+          <h1 class="lg:text-9xl text-6xl hover:bg-[#88b45c] hover:text-[#faf0e6]">Home</h1>
+        </a>
+        <a href="about.html">
+          <h1 class="lg:text-9xl text-6xl hover:bg-[#88b45c] hover:text-[#faf0e6]">About</h1>
+        </a>
+        <a href="faq.html">
+          <h1 class="lg:text-9xl text-6xl hover:bg-[#88b45c] hover:text-[#faf0e6]">FAQs</h1>
+        </a>
+       
+
+      </div>
+      </div>
+  </header>
+  <main>
+    <h1 class="my-6 text-3xl font-bold">Frequently Asked Questions</h1>
+    <div class="accordion">
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#one" class="button">
+            <h2>What is fast fashion, and how does it contribute to environmental problems?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="one">
+          <div>
+            <p>
+              Fast fashion refers to the rapid production and consumption of inexpensive clothing items that follow the
+              latest trends. The fast fashion industry contributes to environmental problems through excessive resource
+              consumption, water pollution, greenhouse gas emissions, and increased textile waste due to its short
+              product life cycle.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#two" class="button">
+            <h2>How does fast fashion impact water resources?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="two">
+          <div>
+            <p>
+              Fast fashion requires vast amounts of water for dyeing, printing, and finishing textiles. The
+              chemical-laden wastewater from textile factories is often discharged into water bodies, leading to water
+              pollution and harming aquatic ecosystems.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#three" class="button">
+            <h2>How does fast fashion contribute to textile waste?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="three">
+          <div>
+            <p>
+              Fast fashion's business model encourages consumers to buy more, leading to a higher turnover of clothes.
+              As a result, discarded garments and textiles end up in landfills, adding to the growing problem of textile
+              waste.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#four" class="button">
+            <h2>What are the environmental impacts of textile waste in landfills?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="four">
+          <div>
+            <p>
+              Textile waste in landfills can release methane, a potent greenhouse gas, as the garments decompose.
+              Additionally, the dyes and chemicals from the fabrics can leach into the soil and contaminate nearby water
+              sources.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#five" class="button">
+            <h2>How can the fashion industry improve its practices to reduce environmental impacts?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="five">
+          <div>
+            <p>
+              The fashion industry can invest in eco-friendly materials, improve supply chain transparency, implement
+              water and energy-saving technologies, adopt circular economy principles, and encourage designs that
+              promote clothing longevity and versatility.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#one" class="button">
+            <h2>How do I support sustainable fashion?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="one">
+          <div>
+            <p>
+              Buy less, choose well, and make it last! Support ethical brands, shop secondhand, and invest in quality
+              pieces.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#one" class="button">
+            <h2>How can I reduce textile waste?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="one">
+          <div>
+            <p>
+              Donate, swap, or upcycle your used clothing, and always consider repurposing items before discarding them.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#one" class="button">
+            <h2>What is textile recycling?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="one">
+          <div>
+            <p>
+              Textile recycling reclaims used fabrics, repurposing them into new products or breaking them down to
+              create new textiles.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="qa">
+        <div class="question">
+          <button data-answer-target="#one" class="button">
+            <h2>Do eco-friendly fabrics exist?</h2>
+            <div class='sign'></div>
+          </button>
+        </div>
+        <div class="answer" id="one">
+          <div>
+            <p>
+              Yes! Organic cotton, linen, hemp, bamboo, and Tencel are all sustainable alternatives to fast fashion
+              fabrics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+        <span class="ml-3 text-xl">Fast Fashion</span>
+      </a>
+
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <p class="text-sm text-gray-900 sm:ml-4 sm:pl-4  sm:py-2 sm:mt-0 mt-4">Made with ❤️ by DPS Rohini</p>
+      </span>
+    </div>
+  </footer>
+  <script>
+    const questions = document.querySelectorAll('[data-answer-target]');
+
+    if (questions) {
+      questions.forEach((question) => {
+        question.addEventListener('click', function () {
+          const answer = this.parentElement.nextElementSibling;
+
+          questions.forEach((q) => {
+            if (q !== this) {
+              q.classList.remove('active');
+              q.parentElement.nextElementSibling.classList.remove('active');
+            }
+          });
+          this.classList.toggle('active');
+          answer.classList.toggle('active');
+        });
+      });
+    }
+  </script>
+
+
+  <script>
+    const openCardButton = document.getElementById('open-card-button');
+    const card = document.getElementById('card');
+
+    openCardButton.addEventListener('click', () => {
+      card.classList.remove('hidden');
+    });
+
+    card.addEventListener('click', (event) => {
+      if (event.target === card) {
+        card.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
