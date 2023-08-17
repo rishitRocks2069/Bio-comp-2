@@ -6,12 +6,21 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
   <script src="https://cdn.tailwindcss.com"></script>
   
 </head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+</style>
 <body class="bg-[#98bc6c]" style="font-family: 'Satoshi', sans-serif;">
-<section class="h-screen w-full relative">
+    <script>
+        AOS.init();
+      </script>
+<section class="h-screen w-full relative" data-aos="fade-up">
     <Div class="flex flex-cols justify-center items-center h-full">
         <div class="grid">
             <div class="flex flex-cols justify-center items-center"><img src="star.png"></div>
@@ -23,22 +32,22 @@
             </div>
         </div>
     </Div>
-<h1 class="text-xl absolute bottom-5 right-10">Scroll To Discover <ion-icon name="arrow-down-outline" class="animate-bounce"></ion-icon></h1>
+<a href="#scroll" class="text-xl absolute bottom-5 right-10">Scroll To Discover <ion-icon name="arrow-down-outline" class="animate-bounce"></ion-icon></a>
 </section>
-<section class=" w-full">
+<section class=" w-full" id="scroll" data-aos="fade-up">
     <h1 class="text-[10rem] text-center font-bold drop-shadow-xl">AWAKENING</h1>
     <div class="flex flex-cols justify-center items-center ">
         <h1 class="text-center text-2xl w-[50vw] ">Reveal the disturbing truth behind fast fashion and its environmental havoc through excessive textile wastage. Join the mission for a greener future, where conscious choices and sustainable practices reshape the fashion industry's course. Your actions can be the change our world urgently needs.</h1>
     </div>
     <div class="flex flex-cols justify-center items-center mt-20     ">
-        <a href="content.html"><button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold">GET INVOLVED</button></a>
+        <a href="about.html"><button class="px-5 py-2 rounded-3xl bg-red-500 drop-shadow-lg text-white font-bold">GET INVOLVED</button></a>
     </div>
     <Div class='flex flex-cols justify-center items-center mt-32 mx-auto w-[72vw] h-[72vh]'>
         <img src="https://images.unsplash.com/photo-1564497417229-550e312643f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" class="w-full h-full  rounded-3xl">
     </Div>
 </section>
 
-<section>
+<section data-aos="fade-up">
     <div class="">
         <Div class="flex flex-cols justify-center items-center mt-10">
         <Div class="grid gap-5">
@@ -83,7 +92,7 @@
     </Div>
     </div>
 </section>
-<Section class=" w-full py-10 px-[14vw] mt-10" >
+<Section class=" w-full py-10 px-[14vw] mt-10" data-aos="fade-up">
     <div class="flex flex-cols justify-center items-center">
        <div class="flex flex-cols justify-center items-center">
             <div class="grid gap-5">
@@ -110,7 +119,7 @@
         <Div class="w-1/2 h-full"></Div>
     </div>
 </Section>
-<section class="text-gray-600 body-font px-[12vw]">
+<section class="text-gray-600 body-font px-[12vw]" data-aos="fade-up">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       
       <div class="flex flex-wrap md:-m-2 -m-1">
@@ -139,7 +148,7 @@
       </div>
     </div>
   </section>
-  <Section class="px-20 py-10">
+  <Section class="px-20 py-10" data-aos="fade-up">
     <div class="flex flex-cols ">
        
             <div class="grid gap-5 px-[9vw]">
