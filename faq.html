@@ -8,9 +8,88 @@
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="faq.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+  :root{
+    --black:#000000;
+    --green:#98bc6c;
+    --dark-green:#88b45c;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 80px 1fr 100px;
+}
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    .accordion {
+      width: 100%;
+      max-width: 60rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .qa {
+      color: var(--white);
+      padding: 1rem;
+      transition: background-color 500ms;
+      border-top: 2px solid var(--white);
+    }
+    
+    .question button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+    
+    .question h2 {
+      margin: 0;
+      color: var(--white);
+      font-family: 'Satoshi',sans-serif;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .question button::after{
+      font-size: 2rem;
+      color: var(--white);
+      content: '+';
+      transition: rotate 500ms;
+    }
+    
+    .answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 500ms;
+    }
+    .answer div{
+      overflow: hidden;
+    }
+    .answer div p{
+      margin-bottom: 1rem;
+    }
+    .answer.active {
+      grid-template-rows: 1fr;
+    }
+    .question button.active::after{
+      rotate: 45deg;
+    }
+    .qa:has(.answer.active){
+      background-color: var(--dark-green);
+    }
 
+</style>
 <body class="bg-[#98bc6c]" style="font-family: 'Satoshi', sans-serif;">
   <header class="p-4  text-gray-900">
     <div class="container flex justify-between  mx-auto">
@@ -59,7 +138,7 @@
   <main>
     <h1 class="my-6 text-3xl font-bold">Frequently Asked Questions</h1>
     <div class="accordion">
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#one" class="button">
             <h2>What is fast fashion, and how does it contribute to environmental problems?</h2>
@@ -77,7 +156,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#two" class="button">
             <h2>How does fast fashion impact water resources?</h2>
@@ -94,7 +173,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#three" class="button">
             <h2>How does fast fashion contribute to textile waste?</h2>
@@ -111,7 +190,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#four" class="button">
             <h2>What are the environmental impacts of textile waste in landfills?</h2>
@@ -128,7 +207,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#five" class="button">
             <h2>How can the fashion industry improve its practices to reduce environmental impacts?</h2>
@@ -145,7 +224,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#one" class="button">
             <h2>How do I support sustainable fashion?</h2>
@@ -161,7 +240,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#one" class="button">
             <h2>How can I reduce textile waste?</h2>
@@ -176,7 +255,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#one" class="button">
             <h2>What is textile recycling?</h2>
@@ -192,7 +271,7 @@
           </div>
         </div>
       </div>
-      <div class="qa">
+      <div class="qa" data-aos="fade-up">
         <div class="question">
           <button data-answer-target="#one" class="button">
             <h2>Do eco-friendly fabrics exist?</h2>
@@ -224,6 +303,7 @@
     </div>
   </footer>
   <script>
+    AOS.init();
     const questions = document.querySelectorAll('[data-answer-target]');
 
     if (questions) {

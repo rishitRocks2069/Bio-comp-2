@@ -7,7 +7,8 @@
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,500,400&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
 </head>
 <body class="bg-[#98bc6c] " style="font-family: 'Satoshi', sans-serif;">
 
@@ -56,7 +57,7 @@
       </div>
   </header>
 
-    <Section class="relative">
+    <Section class="relative" data-aos="fade-up">
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a] h-[16vw] w-[16vw]"></div>
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
 <div class="absolute top-0 left-0 rounded-br-full   bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -75,7 +76,7 @@
 </div>
 </Section>
 
-<section class="text-gray-600 body-font relative">
+<section class="text-gray-600 body-font relative" data-aos="fade-up">
     <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a] h-[16vw] w-[16vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
 <div class="absolute top-0 right-0 rounded-bl-full   bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -117,7 +118,7 @@
      
     </div>
   </section>
-<Section class="relative">
+<Section class="relative" data-aos="fade-up">
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a] h-[16vw] w-[16vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/50 h-[20vw] w-[20vw]"></div>
   <div class="absolute bottom-0 left-0 rounded-tr-full  z-0 bg-[#99a56a]/30 h-[24vw] w-[24vw]"></div>
@@ -216,6 +217,11 @@
     --green:#98bc6c;
     --dark-green:#88b45c;
 }
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   .bold{
     font-size: 2.4em;
     font-weight: 800;
@@ -252,7 +258,7 @@
     font-weight: 500;
   }
 </style>
-<section class="content p-8">
+<section class="content p-8" data-aos="fade-up">
   <h1 class="bold">More about Textile Waste</h1>
   <h1>I. Resource Depletion and Pollution</h1>
 <h2>A. Excessive Water Consumption</h2>
@@ -318,6 +324,7 @@
   </div>
 </footer>
 <script>
+  AOS.init();
     function openModal(modalId) {
         document.getElementById(modalId).classList.remove('hidden');
     }
